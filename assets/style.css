@@ -1,0 +1,341 @@
+/* variables declaration */
+:root {
+    --blue: #445877;
+    --teal: #92ccce;
+    --grey: #31343d;
+    --dark: #1c1d21;
+    --light: #eeeef7;
+    --largeFont: 40px;
+    --mediumFont: 20px;
+    --smallFont: 15px;
+}
+
+/* general styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Abril Fatface', cursive;
+}
+
+/* styling for the header section of the website */
+header {
+    background-color: var(--grey);
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    padding-right: 20px;
+    width: 30%;
+    font-size: var(--largeFont);
+    background-color: var(--teal);
+    color: var(--grey);
+    text-align: end;
+    position: absolute;
+    left: 0;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header li {
+    margin: 0 5px;
+    border-style: none none solid none;
+    border-width: medium;
+    border-color: var(--teal);
+}
+
+header a {
+    color: var(--teal);
+    text-decoration-line: none;
+    padding: 10px;
+    font-size: var(--mediumFont);
+}
+
+/* styling for the website's main image */
+#main-image {
+    position: relative;
+    text-align: center;
+}
+
+.main-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+#floating-subtitles {
+    width: 20%;
+    background-color: var(--teal);
+    color: var(--grey);
+    font-size: var(--mediumFont);
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* styling for the main content of the website */
+main {
+    color: var(--blue);
+    margin: 0 70px;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: var(--smallFont);
+}
+
+/* styling for the about me, portfolio and contact me headers to be flushed to the left*/
+main h2 {
+    font-size: var(--largeFont);
+    width: 30%;
+    padding-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#about-me, #my-work, #contact-me {
+    margin: 20px 0;
+    display: flex;
+}
+
+/* styling for the about me details (particularly to stay on the right) */
+#about-me p {
+    width: 70%;
+    padding-left: 30px;
+    border-style: none none none solid;
+    border-color: var(--blue);
+    border-width: 3px;
+}
+
+/* styling for projects details (particularly arranging the photographs in order of most recent project to other recent projects, and putting a border + caption for each project) */
+.projects {
+    padding-left: 30px;
+    width: 70%;
+    border-style: none none none solid;
+    border-color: var(--blue);
+    border-width: 3px;
+}
+
+#row-one {
+    position: relative;
+    margin: 2px;
+    border: thick solid var(--teal);
+}
+
+#most-recent-project {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0.7;
+    display: block;
+}
+
+#recent-project {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    opacity: 0.7;
+    display: block;
+}
+
+#caption1 {
+    width: 20%;
+    padding: 5px;
+    background-color: var(--teal);
+    color: var(--grey);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    z-index: 2;
+}
+
+#caption h2 {
+    font-size: 15px;
+}
+
+#caption p {
+    font-size: 15px;
+}
+
+#row-two, #row-three {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#row-two-left, #row-two-right, #row-three-left, #row-three-right {
+    width: 50%; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    border: thick solid var(--teal);
+}
+
+#caption2, #caption3, #caption4, #caption5 {
+    width: 30%;
+    padding: 5px;
+    background-color: var(--teal);
+    color: var(--grey);
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    z-index: 2;
+}
+
+/* styling for image, so that hovering over the image would result in slight opacity */
+#recent-project:hover, #most-recent-project:hover {
+    opacity: 1;
+}
+
+/* styling for the contact me details (particularly to make the bullet lists line up horizontally in stylized text format) */
+#contact-me ul {
+    width: 70%;
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-style: none none none solid;
+    border-color: var(--blue);
+    border-width: 3px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#contact-me li {
+    border-style: none none solid none;
+    border-width: medium;
+    border-color: var(--blue);
+    font-size: var(--mediumFont);
+}
+
+#contact-me a {
+    color: var(--blue);
+    text-decoration-line: none;
+    font-size: var(--mediumFont);
+}
+
+/* styling to ensure mobile responsiveness */
+@media only screen and (max-width: 768px) {
+    /* general styling: change font to something simpler */
+    body {
+        font-family: sans-serif;
+    }
+
+    /* update header to be centered and move website name to the top */
+    header {
+        justify-content: center;
+        padding: 40px;
+    }
+
+    h1 {
+        width: 100%;
+        padding: 5px;
+        font-size: var(--mediumFont);
+        padding: none;
+        text-align: center;
+        top: 0;
+    }
+
+    /* update nav bar to be centered with different styling (border) */
+    header ul {
+        padding: 0;
+        padding-top: 25px;
+    }
+
+    header li {
+        border: thin solid var(--teal);
+        margin: auto;
+    }
+
+    header a {
+        font-size: var(--smallFont);
+    }
+
+    /* adjust subtitles width to better fit viewport */
+    #floating-subtitles {
+        width: 50%;
+    }
+
+    /* update main sections to stack on top of details, instead of being positioned to the left */
+    #about-me, #my-work, #contact-me {
+        flex-direction: column;
+    }
+
+    main {
+        margin: 0 20px;
+    }
+    main h2 {
+        width: 100%;
+        font-size: var(--mediumFont);
+        border-style: none none solid none;
+        border-color: var(--blue);
+        border-width: 5px;
+        justify-content: center;
+    }
+
+    /* update about me section */
+    #about-me p {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        text-align: center;
+    }
+
+    /* update portfolio section to have each project stack on top of each other in the same format */
+    .projects {
+        width: 100%;
+        padding: 10px;
+        border: none;
+    }
+
+    #row-two, #row-three {
+        flex-direction: column;
+    }
+    
+    #row-one, #row-two-left, #row-two-right, #row-three-left, #row-three-right {
+        width: 100%;
+        height: auto;
+    }
+
+    #most-recent-project {
+        height: 200px;
+    }
+
+    #caption1, #caption2, #caption3, #caption4, #caption5 {
+        width: 50%;
+        bottom: 0;
+    }
+
+    /* update contact me section, specifically making the contact details line up vertically instead of horizontally */
+    #contact-me ul {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        flex-direction: column;
+    }
+
+    #contact-me li {
+        margin-top: 10px;
+        border: none;
+        text-align: center;
+    }
+}
